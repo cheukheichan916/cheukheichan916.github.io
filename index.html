@@ -8,147 +8,199 @@
 <style>
   body {
     margin: 0;
-    font-family: system-ui, sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
   }
 
-  .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
+  /* HEADER */
+  .header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #0f172a;
+  }
+
+  .nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+  }
+
+  .nav a:hover {
+    color: #2563eb;
   }
 
   /* HERO */
   .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    border-radius: 16px;
-    border: 1px solid #334155;
-    margin-bottom: 40px;
+    background: #ffffff;
+    padding: 60px 40px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
+  .hero h2 {
+    font-size: 2rem;
     margin-bottom: 10px;
-    color: #38bdf8;
+    color: #1e3a8a;
   }
 
   .hero p {
-    font-size: 1rem;
-    color: #cbd5e1;
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 700px;
   }
 
   /* SECTION */
   .section {
-    margin-bottom: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
   }
 
-  .section h2 {
+  .section h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    color: #38bdf8;
+    color: #1e3a8a;
   }
 
-  /* CARD GRID */
+  .section p {
+    color: #4b5563;
+    font-size: 1rem;
+  }
+
+  /* PROJECT GRID */
   .grid {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 20px;
   }
 
   .card {
-    background: #1e293b;
+    background: #f9fafb;
     padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-    transition: transform 0.2s ease, background 0.2s ease;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    transform: translateY(-4px);
-    background: #243447;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  .card h3 {
+  .card h4 {
     margin-top: 0;
-    color: #38bdf8;
+    color: #1e3a8a;
   }
 
   .card p {
-    color: #cbd5e1;
-    font-size: 0.9rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+
+  .card a {
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .card a:hover {
+    text-decoration: underline;
   }
 
   /* FOOTER */
   footer {
     text-align: center;
-    margin-top: 40px;
     padding: 20px;
-    color: #64748b;
+    color: #6b7280;
     font-size: 0.85rem;
+    margin-top: 40px;
   }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Cheuk · Data Analyst</h1>
-    <p>Python · SQL · Power BI · Healthcare Analytics · GitHub Automation</p>
+<!-- HEADER -->
+<div class="header">
+  <h1>Cheuk · Data Analyst</h1>
+  <div class="nav">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </div>
-
-  <!-- ABOUT -->
-  <div class="section">
-    <h2>About Me</h2>
-    <p>
-      I specialize in healthcare data analytics, clinical quality indicators, and GitHub‑based automation.
-      I build ETL pipelines, dashboards, and explainable ML workflows that turn raw data into actionable insights.
-    </p>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="section">
-    <h2>Featured Projects</h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3>GitHub Analytics Dashboard</h3>
-        <p>Python ETL + Power BI dashboard analyzing commits, issues, PRs, and contributor activity.</p>
-        <a href="https://github.com/your-username/github-analytics" style="color:#38bdf8;">View Project →</a>
-      </div>
-
-      <div class="card">
-        <h3>Clinical Quality Indicator Monitoring</h3>
-        <p>Automated KPI reporting with SQL models and Power BI drill‑down dashboards.</p>
-        <a href="https://github.com/your-username/clinical-quality-dashboard" style="color:#38bdf8;">View Project →</a>
-      </div>
-
-      <div class="card">
-        <h3>SHAP Explainability for Healthcare Models</h3>
-        <p>Explainable ML using SHAP visualizations for clinical prediction transparency.</p>
-        <a href="https://github.com/your-username/shap-healthcare" style="color:#38bdf8;">View Project →</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>GitHub: https://github.com/your-username</p>
-    <p>LinkedIn: https://linkedin.com/in/your-profile</p>
-  </div>
-
-  <footer>
-    © <span id="year"></span> Cheuk · Data Analyst · Built with GitHub Pages
-  </footer>
-
 </div>
+
+<!-- HERO -->
+<div class="hero">
+  <h2>Corporate Data Analytics & Reporting</h2>
+  <p>
+    I specialize in healthcare analytics, workflow optimization, and GitHub‑based automation.
+    My work focuses on delivering reliable, business‑ready insights through structured data pipelines,
+    SQL reporting, and Power BI dashboards.
+  </p>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+  <h3>About Me</h3>
+  <p>
+    With experience in clinical quality indicators, digital workflow enhancement, and Python automation,
+    I build analytics solutions that support operational efficiency and strategic decision‑making.
+  </p>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+  <h3>Featured Projects</h3>
+
+  <div class="grid">
+
+    <div class="card">
+      <h4>GitHub Analytics Dashboard</h4>
+      <p>Corporate‑style reporting for GitHub repository activity, including commits, issues, PRs, and contributor trends.</p>
+      <a href="https://github.com/your-username/github-analytics">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h4>Clinical Quality Indicator Monitoring</h4>
+      <p>Automated KPI reporting framework with SQL models and Power BI dashboards for healthcare operations.</p>
+      <a href="https://github.com/your-username/clinical-quality-dashboard">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h4>SHAP Explainability for Healthcare Models</h4>
+      <p>Explainable ML workflows using SHAP to support transparent clinical decision‑making.</p>
+      <a href="https://github.com/your-username/shap-healthcare">View Project →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+  <h3>Contact</h3>
+  <p>Email: your.email@example.com</p>
+  <p>LinkedIn: https://linkedin.com/in/your-profile</p>
+  <p>GitHub: https://github.com/your-username</p>
+</div>
+
+<footer>
+  © <span id="year"></span> Cheuk · Data Analyst · Corporate Portfolio
+</footer>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
@@ -156,4 +208,3 @@
 
 </body>
 </html>
-
